@@ -15,10 +15,12 @@ namespace WinFormsApp9
             {
                 case 100:
                     {
+                        pictureBox1.Image = Image.FromFile(Path.Combine(Application.StartupPath, "grass1.jpg"));
                         break;
                     }
                 case 200:
                     {
+                        pictureBox1.Image = Image.FromFile(Path.Combine(Application.StartupPath, "grass2.jpg"));
                         break;
                     }
                 case 300:
