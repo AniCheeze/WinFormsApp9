@@ -11,6 +11,7 @@ namespace WinFormsApp9
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             touch += 1;
+            label1.Text = touch.ToString();
         }
     }
 }
