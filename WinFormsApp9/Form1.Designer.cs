@@ -74,5 +74,6 @@
 
         private PictureBox pictureBox1;
         private Label label1;
+        private PictureBox pictureBox2;
     }
 }

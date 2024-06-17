@@ -15,11 +15,13 @@ namespace WinFormsApp9
             {
                 case 100:
                     {
+                        label1.Text = "Титул: Геншинёнок";
                         pictureBox1.Image = Image.FromFile(Path.Combine(Application.StartupPath, "grass1.jpg"));
                         break;
                     }
                 case 200:
                     {
+                        label1.Text = "Титул: Растер";
                         pictureBox1.Image = Image.FromFile(Path.Combine(Application.StartupPath, "grass2.jpg"));
                         break;
                     }
