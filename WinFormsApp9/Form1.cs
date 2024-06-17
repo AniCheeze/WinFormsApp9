@@ -41,5 +41,12 @@ namespace WinFormsApp9
                     }
             }
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form2 f2 = new Form2();
+            f2.ShowDialog();
+        }
     }
 }
