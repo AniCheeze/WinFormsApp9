@@ -3,12 +3,20 @@ namespace WinFormsApp9
     public partial class Form1 : Form
     {
         int touch;
+        List<Poizon> poizons = new List<Poizon>();
         public Form1()
         {
             InitializeComponent();
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            Random rnd = new Random();
+            int PG = rnd.Next(0, 4);
+            if(PG == 0)
+            {
+                PG = rnd.Next(0, 3);
+                poizons.Add(new Poizon(PG,(PG+1)*3,5));
+            }
             touch += 1;
             label1.Text = touch.ToString();
             switch (touch)
@@ -53,9 +61,33 @@ namespace WinFormsApp9
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form2 f2 = new Form2();
+            Form2 f2 = new Form2(poizons);
             f2.ShowDialog();
+
+        }
+    }
+    public class Poizon
+    {
+        int type;
+        int bust;
+        int time; // Кол. кликов
+
+        public Poizon()
+        {
+            type = 0;
+            bust = 0;
+            time = 0;
+
+        }
+        public Poizon(int type, int bust, int time)
+        {
+            this.type = type;
+            this.time = time;
+            this.bust = bust;
+        }
+        public int GetType()
+        {
+            return type;
         }
     }
 }
