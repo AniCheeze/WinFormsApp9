@@ -27,18 +27,25 @@ namespace WinFormsApp9
                     }
                 case 300:
                     {
+                        label1.Text = "Элден рингер";
+                        pictureBox1.Image = Image.FromFile(Path.Combine(Application.StartupPath, "grass3.jpg"));
                         break;
                     }
                 case 400:
                     {
+                        label1.Text = "Фортнайтер";
+                        pictureBox1.Image = Image.FromFile(Path.Combine(Application.StartupPath, "grass4.jpg"));
                         break;
                     }
                 case 500:
                     {
+                        label1.Text = "Батлфилд плеер";
+                        pictureBox1.Image = Image.FromFile(Path.Combine(Application.StartupPath, "grass5.jpg"));
                         break;
                     }
                 case 600:
                     {
+                        label1.Text = "Титул: Хойщик";
                         break;
                     }
             }
