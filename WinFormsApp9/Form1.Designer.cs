@@ -37,7 +37,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(100, 123);
+            pictureBox1.Location = new Point(101, 94);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(569, 294);
             pictureBox1.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 26F);
-            label1.Location = new Point(352, 73);
+            label1.Location = new Point(353, 44);
             label1.Name = "label1";
             label1.Size = new Size(39, 47);
             label1.TabIndex = 1;
