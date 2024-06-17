@@ -12,10 +12,10 @@ namespace WinFormsApp9
         {
             Random rnd = new Random();
             int PG = rnd.Next(0, 4);
-            if(PG == 0)
+            if (PG == 0)
             {
                 PG = rnd.Next(0, 3);
-                poizons.Add(new Poizon(PG,(PG+1)*3,5));
+                poizons.Add(new Poizon(PG, (PG + 1) * 3, 5));
             }
             touch += 1;
             label1.Text = touch.ToString();
@@ -59,12 +59,13 @@ namespace WinFormsApp9
             }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
             Form2 f2 = new Form2(poizons);
             f2.ShowDialog();
 
         }
+
     }
     public class Poizon
     {
