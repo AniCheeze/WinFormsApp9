@@ -14,7 +14,7 @@ namespace WinFormsApp9
     {
         List<Poizon> p;
         bool Uhave = false;
-        int time;
+        int time,P1;
         public Form2(List<Poizon> p, int time)
         {
             int col1 = 0,col2 = 0,col3 = 0;
@@ -54,6 +54,9 @@ namespace WinFormsApp9
                     {
                         p1.SetBust(5, 5);
                         Uhave = true;
+                        P1 = Convert.ToInt32(label1.Text);
+                        P1--;
+                        label1.Text = P1.ToString();
                         break;
                     }
                 }
@@ -74,6 +77,9 @@ namespace WinFormsApp9
                     {
                         p1.SetBust(10, 5);
                         Uhave = true;
+                        P1 = Convert.ToInt32(label2.Text);
+                        P1--;
+                        label2.Text = P1.ToString();
                         break;
                     }
                 }
@@ -94,6 +100,9 @@ namespace WinFormsApp9
                 {
                     p1.SetBust(15, 5);
                     Uhave = true;
+                    P1 = Convert.ToInt32(label3.Text);
+                    P1--;
+                    label3.Text = P1.ToString();
                     break;
                 }
             }
