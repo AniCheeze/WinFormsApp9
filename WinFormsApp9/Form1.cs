@@ -7,6 +7,7 @@ namespace WinFormsApp9
         public Form1()
         {
             InitializeComponent();
+            BackColor = Color.Green;
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -23,37 +24,37 @@ namespace WinFormsApp9
             {
                 case 100:
                     {
-                        label1.Text = "Титул: Геншинёнок";
+                        label2.Text = "Титул: Геншинёнок";
                         pictureBox1.Image = Image.FromFile(Path.Combine(Application.StartupPath, "grass1.jpg"));
                         break;
                     }
                 case 200:
                     {
-                        label1.Text = "Титул: Растер";
+                        label2.Text = "Титул: Растер";
                         pictureBox1.Image = Image.FromFile(Path.Combine(Application.StartupPath, "grass2.jpg"));
                         break;
                     }
                 case 300:
                     {
-                        label1.Text = "Элден рингер";
+                        label2.Text = "Элден рингер";
                         pictureBox1.Image = Image.FromFile(Path.Combine(Application.StartupPath, "grass3.jpg"));
                         break;
                     }
                 case 400:
                     {
-                        label1.Text = "Фортнайтер";
+                        label2.Text = "Фортнайтер";
                         pictureBox1.Image = Image.FromFile(Path.Combine(Application.StartupPath, "grass4.jpg"));
                         break;
                     }
                 case 500:
                     {
-                        label1.Text = "Батлфилд плеер";
+                        label2.Text = "Батлфилд плеер";
                         pictureBox1.Image = Image.FromFile(Path.Combine(Application.StartupPath, "grass5.jpg"));
                         break;
                     }
                 case 600:
                     {
-                        label1.Text = "Титул: Хойщик";
+                        label2.Text = "Титул: Хойщик";
                         break;
                     }
             }
