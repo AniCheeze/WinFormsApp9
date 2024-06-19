@@ -2,7 +2,7 @@ namespace WinFormsApp9
 {
     public partial class Form1 : Form
     {
-        int touch = 298;
+        int touch, plus = 1, time = 0;
         List<Poizon> poizons = new List<Poizon>();
         public Form1()
         {
@@ -15,10 +15,28 @@ namespace WinFormsApp9
             int PG = rnd.Next(0, 4);
             if (PG == 0)
             {
-                PG = rnd.Next(0, 3);
-                poizons.Add(new Poizon(PG, (PG + 1) * 3, 5));
+                PG = rnd.Next(0, 6);
+                poizons.Add(new Poizon(PG));
             }
-            touch += 1;
+            foreach(Poizon p in poizons)
+            {
+                if (p.GetTime() != 0)
+                {
+                    plus = p.GetBuy();
+                    time = p.GetTime();
+                    poizons.Remove(p);
+                    break;
+                }
+            }
+            if (time == 0)
+            {
+                touch += 1;
+            }
+            else
+            {
+                touch += plus;
+                time--;
+            }
             label1.Text = touch.ToString();
             if (touch >= 100)
             {
@@ -53,11 +71,9 @@ namespace WinFormsApp9
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2(poizons);
+            Form2 f2 = new Form2(poizons,time);
             f2.ShowDialog();
-
         }
-
     }
     public class Poizon
     {
@@ -72,15 +88,28 @@ namespace WinFormsApp9
             time = 0;
 
         }
-        public Poizon(int type, int bust, int time)
+        public Poizon(int type)
         {
             this.type = type;
-            this.time = time;
-            this.bust = bust;
+            type = 0;
+            time= 0;
         }
         public int GetType()
         {
             return type;
+        }
+        public int GetBuy()
+        {
+            return bust;
+        }
+        public int GetTime()
+        {
+            return time;
+        }
+        public void SetBust(int b, int t)
+        {
+            bust = b;
+            time = t;
         }
     }
 }
