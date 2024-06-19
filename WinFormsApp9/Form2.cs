@@ -17,6 +17,7 @@ namespace WinFormsApp9
         int time;
         public Form2(List<Poizon> p, int time)
         {
+            int col1 = 0,col2 = 0,col3 = 0;
             InitializeComponent();
             this.time = time;
             this.p = p;
@@ -24,15 +25,21 @@ namespace WinFormsApp9
             {
                 if (poizon.GetType() == 0)
                 {
+                    col1++;
                     pictureBox1.Image = Image.FromFile(Path.Combine(Application.StartupPath, "P1.jpg"));
-                }
-                if (poizon.GetType() == 1)
+                    label1.Text = col1.ToString();
+                    }
+                else if (poizon.GetType() == 1)
                 {
+                    col2++;
                     pictureBox2.Image = Image.FromFile(Path.Combine(Application.StartupPath, "P2.jpg"));
+                    label2.Text = col2.ToString();
                 }
-                if (poizon.GetType() == 2)
+                else if (poizon.GetType() == 2)
                 {
                     pictureBox3.Image = Image.FromFile(Path.Combine(Application.StartupPath, "P3.jpg"));
+                    col3++;
+                    label3.Text = col3.ToString();
                 }
             }
         }
@@ -61,7 +68,6 @@ namespace WinFormsApp9
         {
             if (Uhave != true && time == 0)
             {
-                MessageBox.Show(time.ToString());
                 foreach (Poizon p1 in p)
                 {
                     if (p1.GetType() == 1)

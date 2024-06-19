@@ -15,18 +15,8 @@ namespace WinFormsApp9
             int PG = rnd.Next(0, 4);
             if (PG == 0)
             {
-                PG = rnd.Next(0, 6);
+                PG = rnd.Next(0, 3);
                 poizons.Add(new Poizon(PG));
-            }
-            foreach(Poizon p in poizons)
-            {
-                if (p.GetTime() != 0)
-                {
-                    plus = p.GetBuy();
-                    time = p.GetTime();
-                    poizons.Remove(p);
-                    break;
-                }
             }
             if (time == 0)
             {
@@ -73,6 +63,16 @@ namespace WinFormsApp9
         {
             Form2 f2 = new Form2(poizons,time);
             f2.ShowDialog();
+            foreach (Poizon p in poizons)
+            {
+                if (p.GetTime() != 0)
+                {
+                    plus = p.GetBuy();
+                    time = p.GetTime();
+                    poizons.Remove(p);
+                    break;
+                }
+            }
         }
     }
     public class Poizon
