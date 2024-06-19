@@ -2,7 +2,7 @@ namespace WinFormsApp9
 {
     public partial class Form1 : Form
     {
-        int touch;
+        int touch = 298;
         List<Poizon> poizons = new List<Poizon>();
         public Form1()
         {
@@ -20,43 +20,34 @@ namespace WinFormsApp9
             }
             touch += 1;
             label1.Text = touch.ToString();
-            switch (touch)
+            if (touch >= 100)
             {
-                case 100:
-                    {
-                        label2.Text = "Титул: Геншинёнок";
-                        pictureBox1.Image = Image.FromFile(Path.Combine(Application.StartupPath, "grass1.jpg"));
-                        break;
-                    }
-                case 200:
-                    {
-                        label2.Text = "Титул: Растер";
-                        pictureBox1.Image = Image.FromFile(Path.Combine(Application.StartupPath, "grass2.jpg"));
-                        break;
-                    }
-                case 300:
+                label2.Text = "Титул: Геншинёнок";
+                pictureBox1.Image = Image.FromFile(Path.Combine(Application.StartupPath, "grass1.jpg"));
+                if(touch >= 200)
+                {
+                    label2.Text = "Титул: Растер";
+                    pictureBox1.Image = Image.FromFile(Path.Combine(Application.StartupPath, "grass2.jpg"));
+                    if(touch >= 300)
                     {
                         label2.Text = "Элден рингер";
                         pictureBox1.Image = Image.FromFile(Path.Combine(Application.StartupPath, "grass3.jpg"));
-                        break;
+                        if( touch >= 400)
+                        {
+                            label2.Text = "Фортнайтер";
+                            pictureBox1.Image = Image.FromFile(Path.Combine(Application.StartupPath, "grass4.jpg"));
+                        }
+                        if (touch >= 500)
+                        {
+                            label2.Text = "Батлфилд плеер";
+                            pictureBox1.Image = Image.FromFile(Path.Combine(Application.StartupPath, "grass5.jpg"));
+                            if(touch >= 600)
+                            {
+                                label2.Text = "Титул: Хойщик";
+                            }
+                        }
                     }
-                case 400:
-                    {
-                        label2.Text = "Фортнайтер";
-                        pictureBox1.Image = Image.FromFile(Path.Combine(Application.StartupPath, "grass4.jpg"));
-                        break;
-                    }
-                case 500:
-                    {
-                        label2.Text = "Батлфилд плеер";
-                        pictureBox1.Image = Image.FromFile(Path.Combine(Application.StartupPath, "grass5.jpg"));
-                        break;
-                    }
-                case 600:
-                    {
-                        label2.Text = "Титул: Хойщик";
-                        break;
-                    }
+                }
             }
         }
 
